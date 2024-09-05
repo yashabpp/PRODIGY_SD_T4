@@ -6,7 +6,7 @@ public class SudokuSolver {
         int col = -1;
         boolean isEmpty = true;
 
-            for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (grid[i][j] == 0) {
                     row = i;
@@ -35,6 +35,7 @@ public class SudokuSolver {
                 grid[row][col] = 0;
             }
         }
+
         return false;
     }
 
@@ -84,17 +85,16 @@ public class SudokuSolver {
 
     public static void main(String[] args) {
         int[][] grid = {
+                { 0, 0, 3, 0, 0, 0, 0, 0, 1 },
+                { 0, 0, 0, 0, 0, 0, 2, 0, 0 },
+                { 0, 0, 1, 0, 5, 0, 0, 0, 0 },
+                { 0, 0, 0, 3, 0, 0, 0, 0, 0 },
                 { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-                { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+                { 0, 0, 0, 0, 0, 8, 0, 0, 0 },
+                { 0, 0, 0, 0, 1, 0, 0, 6, 0 },
+                { 0, 4, 0, 0, 0, 0, 0, 0, 0 },
+                { 2, 0, 0, 0, 0, 0, 8, 0, 0 }
         };
-
         if (solveSudoku(grid)) {
             printGrid(grid);
         } else {
